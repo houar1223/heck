@@ -29,17 +29,27 @@ body {
   font-family: "GmarketSansMedium";
 }
 
-.logo{
+.report_button {
   position: absolute;
+  left: 50%;
   top: 50%;
-  left: 30%;
   transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-family: "GmarketSansMedium";
+}
+
+.report_button h1 a {
+  text-decoration: none;
+  color: white;
+  font-family: GmarketSansMedium;
+  font-size: 70px;
 }
 
 .header{
   position: absolute;
   left: 10px;
-  width: 60%;
+  width: 99%;
   height: 50px;
   margin: 0 auto;
   display: flex;
@@ -67,49 +77,4 @@ body {
 .header .nav ul li a{
   text-decoration: none;
   color: white;
-}
-
-.box{
-  position: absolute;
-  top: 50%;
-  left: 1236px;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 100vh;
-  background-color: white;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8), 0 5px 5px 0 rgba(0, 0, 0, 0.8);
-}
-
-.lg-text {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.sm-text {
-  font-size: 3rem;
-}
-
-.author{
-  font-size: 1rem;
-}
-
-#dynamic {
-  position: relative;
-  display: inline-block;
-}
-
-#dynamic::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: -10px;
-  width: 4px;
-  height: 100%;
-  background-color: white;
-}
-
-#dynamic.active::after {
-  display: none;
 }

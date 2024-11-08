@@ -7,13 +7,16 @@ class User {
     this.body = body;
   }
 
-  async login() {
+  async login(req, res) {
     const client = this.body;
     try {
       const user = await UserStorage.getUsersInfo(client.id);
-
       if (user) {
         if (user.id === client.id && user.password === client.password) {
+          req.session.user = {
+            id: user.id,
+            name: user.name,
+          };
           return {success: true};
         }
         return {success: false, msg: "비밀번호가 틀렸습니다."};
